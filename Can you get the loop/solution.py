@@ -6,13 +6,8 @@ def loop_size(node):
     while slow!=fast:
         slow=slow.next
         fast=fast.next.next
-    slow=node
-    while slow!=fast:
-        slow=slow.next
-        fast=fast.next
-    start=slow
     count=1
-    while slow.next!=start:
+    while slow.next!=fast:
         slow=slow.next
         count+=1
     return count
